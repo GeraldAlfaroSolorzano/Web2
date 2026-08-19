@@ -5,7 +5,6 @@ import {
     obtenerDepartamentos
 } from '../services/auth.service.js';
 
-
 function RegistroPage() {
     const [formulario, setFormulario] = useState({
         nombre_completo: '',
@@ -22,11 +21,9 @@ function RegistroPage() {
     const [error, setError] = useState('');
     const [cargando, setCargando] = useState(false);
 
-
     useEffect(() => {
         cargarDepartamentos();
     }, []);
-
 
     async function cargarDepartamentos() {
         try {
@@ -40,7 +37,6 @@ function RegistroPage() {
         }
     }
 
-
     function manejarCambio(evento) {
         const { name, value } = evento.target;
 
@@ -50,11 +46,10 @@ function RegistroPage() {
         });
     }
 
-
     function validarContrasena() {
         if (formulario.contrasena.length < 8) {
             setError(
-                'La contrasena debe tener al menos 8 caracteres'
+                'La contraseña debe tener al menos 8 caracteres'
             );
 
             return false;
@@ -62,7 +57,7 @@ function RegistroPage() {
 
         if (!/[A-Z]/.test(formulario.contrasena)) {
             setError(
-                'La contrasena debe contener al menos una mayuscula'
+                'La contraseña debe contener al menos una mayuscula'
             );
 
             return false;
@@ -70,7 +65,7 @@ function RegistroPage() {
 
         if (!/[0-9]/.test(formulario.contrasena)) {
             setError(
-                'La contrasena debe contener al menos un numero'
+                'La contraseña debe contener al menos un numero'
             );
 
             return false;
@@ -78,7 +73,7 @@ function RegistroPage() {
 
         if (!/[^A-Za-z0-9]/.test(formulario.contrasena)) {
             setError(
-                'La contrasena debe contener al menos un simbolo'
+                'La contraseña debe contener al menos un simbolo'
             );
 
             return false;
@@ -89,7 +84,7 @@ function RegistroPage() {
             formulario.confirmar_contrasena
         ) {
             setError(
-                'Las contrasenas no coinciden'
+                'Las contraseñs no coinciden'
             );
 
             return false;
@@ -97,7 +92,6 @@ function RegistroPage() {
 
         return true;
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -153,7 +147,6 @@ function RegistroPage() {
             setCargando(false);
         }
     }
-
 
     return (
         <main>
@@ -252,7 +245,7 @@ function RegistroPage() {
 
                 <div>
                     <label htmlFor="contrasena">
-                        Contrasena
+                        Contraseña
                     </label>
 
                     <input
@@ -273,7 +266,7 @@ function RegistroPage() {
 
                 <div>
                     <label htmlFor="confirmar_contrasena">
-                        Confirmar contrasena
+                        Confirmar contraseña
                     </label>
 
                     <input
@@ -315,6 +308,5 @@ function RegistroPage() {
         </main>
     );
 }
-
 
 export default RegistroPage;

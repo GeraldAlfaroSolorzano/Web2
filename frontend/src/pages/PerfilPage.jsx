@@ -7,7 +7,6 @@ import {
     cerrarSesion
 } from '../services/auth.service.js';
 
-
 function PerfilPage() {
     const [formulario, setFormulario] = useState({
         nombre_completo: '',
@@ -22,11 +21,9 @@ function PerfilPage() {
     const [error, setError] = useState('');
     const [cargando, setCargando] = useState(true);
 
-
     useEffect(() => {
         cargarDatos();
     }, []);
-
 
     async function cargarDatos() {
         try {
@@ -54,7 +51,6 @@ function PerfilPage() {
         }
     }
 
-
     function manejarCambio(evento) {
         const { name, value } = evento.target;
 
@@ -63,7 +59,6 @@ function PerfilPage() {
             [name]: value
         });
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -102,7 +97,6 @@ function PerfilPage() {
         }
     }
 
-
     async function manejarCerrarSesion() {
         setMensaje('');
         setError('');
@@ -116,11 +110,9 @@ function PerfilPage() {
         }
     }
 
-
     function irCambiarContrasena() {
         window.location.href = '/cambiar-contrasena';
     }
-
 
     if (cargando) {
         return (
@@ -129,7 +121,6 @@ function PerfilPage() {
             </main>
         );
     }
-
 
     return (
         <main>
@@ -230,7 +221,7 @@ function PerfilPage() {
                 type="button"
                 onClick={irCambiarContrasena}
             >
-                Cambiar contrasena
+                Cambiar contraseña
             </button>
 
             <button
@@ -254,6 +245,5 @@ function PerfilPage() {
         </main>
     );
 }
-
 
 export default PerfilPage;

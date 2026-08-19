@@ -35,7 +35,7 @@ function RestablecerContrasenaPage() {
     function validarContrasena() {
         if (formulario.nueva_contrasena.length < 8) {
             setError(
-                'La contrasena debe tener al menos 8 caracteres'
+                'La contraseña debe tener al menos 8 caracteres'
             );
 
             return false;
@@ -43,7 +43,7 @@ function RestablecerContrasenaPage() {
 
         if (!/[A-Z]/.test(formulario.nueva_contrasena)) {
             setError(
-                'La contrasena debe contener al menos una mayuscula'
+                'La contraseña debe contener al menos una mayuscula'
             );
 
             return false;
@@ -51,7 +51,7 @@ function RestablecerContrasenaPage() {
 
         if (!/[0-9]/.test(formulario.nueva_contrasena)) {
             setError(
-                'La contrasena debe contener al menos un numero'
+                'La contraseña debe contener al menos un numero'
             );
 
             return false;
@@ -59,7 +59,7 @@ function RestablecerContrasenaPage() {
 
         if (!/[^A-Za-z0-9]/.test(formulario.nueva_contrasena)) {
             setError(
-                'La contrasena debe contener al menos un simbolo'
+                'La contraseña debe contener al menos un simbolo'
             );
 
             return false;
@@ -70,7 +70,7 @@ function RestablecerContrasenaPage() {
             formulario.confirmar_nueva_contrasena
         ) {
             setError(
-                'Las contrasenas no coinciden'
+                'Las contraseñas no coinciden'
             );
 
             return false;
@@ -78,7 +78,6 @@ function RestablecerContrasenaPage() {
 
         return true;
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -131,7 +130,7 @@ function RestablecerContrasenaPage() {
 
     return (
         <main>
-            <h1>Restablecer contrasena</h1>
+            <h1>Restablecer contraseña</h1>
 
             {!token && (
                 <p>
@@ -143,7 +142,7 @@ function RestablecerContrasenaPage() {
                 <form onSubmit={manejarEnvio}>
                     <div>
                         <label htmlFor="nueva_contrasena">
-                            Nueva contrasena
+                            Nueva contraseña
                         </label>
 
                         <input
@@ -164,7 +163,7 @@ function RestablecerContrasenaPage() {
 
                     <div>
                         <label htmlFor="confirmar_nueva_contrasena">
-                            Confirmar nueva contrasena
+                            Confirmar nueva contraseña
                         </label>
 
                         <input
@@ -184,7 +183,7 @@ function RestablecerContrasenaPage() {
                         type="submit"
                         disabled={cargando}
                     >
-                        Restablecer contrasena
+                        Restablecer contraseña
                     </button>
                 </form>
             )}

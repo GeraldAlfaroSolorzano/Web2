@@ -4,7 +4,6 @@ import {
     iniciarSesion
 } from '../services/auth.service.js';
 
-
 function LoginPage() {
     const [formulario, setFormulario] = useState({
         usuario_o_correo: '',
@@ -24,7 +23,6 @@ function LoginPage() {
             [name]: value
         });
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -48,7 +46,6 @@ function LoginPage() {
         }
     }
 
-
     return (
         <main>
             <h1>Iniciar sesion</h1>
@@ -71,7 +68,7 @@ function LoginPage() {
 
                 <div>
                     <label htmlFor="contrasena">
-                        Contrasena
+                        Contraseña
                     </label>
 
                     <input
@@ -100,7 +97,7 @@ function LoginPage() {
 
             <div>
                 <a href="/recuperar-contrasena">
-                    Olvide mi contrasena
+                    Olvide mi contraseña
                 </a>
             </div>
 
@@ -118,6 +115,5 @@ function LoginPage() {
         </main>
     );
 }
-
 
 export default LoginPage;

@@ -4,7 +4,6 @@ import {
     solicitarRecuperacion
 } from '../services/auth.service.js';
 
-
 function RecuperarContrasenaPage() {
     const [usuarioOCorreo, setUsuarioOCorreo] = useState('');
     const [mensaje, setMensaje] = useState('');
@@ -12,13 +11,11 @@ function RecuperarContrasenaPage() {
     const [enlaceRecuperacion, setEnlaceRecuperacion] = useState('');
     const [cargando, setCargando] = useState(false);
 
-
     function manejarCambio(evento) {
         setUsuarioOCorreo(
             evento.target.value
         );
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -63,10 +60,9 @@ function RecuperarContrasenaPage() {
         }
     }
 
-
     return (
         <main>
-            <h1>Recuperar contrasena</h1>
+            <h1>Recuperar contraseña</h1>
 
             <p>
                 Ingrese su nombre de usuario o correo electronico.
@@ -110,7 +106,7 @@ function RecuperarContrasenaPage() {
                     </p>
 
                     <a href={enlaceRecuperacion}>
-                        Restablecer contrasena
+                        Restablecer contraseña
                     </a>
                 </div>
             )}
@@ -129,6 +125,5 @@ function RecuperarContrasenaPage() {
         </main>
     );
 }
-
 
 export default RecuperarContrasenaPage;

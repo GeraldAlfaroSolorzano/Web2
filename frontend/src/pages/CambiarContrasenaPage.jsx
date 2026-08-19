@@ -4,7 +4,6 @@ import {
     cambiarContrasena
 } from '../services/auth.service.js';
 
-
 function CambiarContrasenaPage() {
     const [formulario, setFormulario] = useState({
         contrasena_actual: '',
@@ -25,7 +24,6 @@ function CambiarContrasenaPage() {
             [name]: value
         });
     }
-
 
     async function manejarEnvio(evento) {
         evento.preventDefault();
@@ -53,11 +51,9 @@ function CambiarContrasenaPage() {
         }
     }
 
-
     function volverPerfil() {
         window.location.href = '/perfil';
     }
-
 
     return (
         <main>
@@ -140,6 +136,5 @@ function CambiarContrasenaPage() {
         </main>
     );
 }
-
 
 export default CambiarContrasenaPage;
