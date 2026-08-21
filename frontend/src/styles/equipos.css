@@ -1,0 +1,136 @@
+.equipos-contenedor {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.equipos-contenedor h1,
+.equipos-contenedor h2 {
+    text-align: center;
+}
+
+.equipos-seccion {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.equipos-formulario div {
+    margin-bottom: 15px;
+}
+
+.equipos-formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.equipos-formulario input,
+.equipos-formulario textarea,
+.equipos-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.equipos-formulario textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.equipos-formulario p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.equipos-boton {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222222;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.equipos-boton:hover {
+    background-color: #444444;
+}
+
+.equipos-boton:disabled {
+    background-color: #999999;
+    cursor: not-allowed;
+}
+
+.equipos-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.equipos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.equipos-tabla th,
+.equipos-tabla td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.equipos-tabla th {
+    background-color: #eeeeee;
+}
+
+.equipo-imagen {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.equipos-acciones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equipos-mensaje {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.equipos-navegacion {
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .equipos-contenedor {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .equipos-seccion {
+        padding: 15px;
+    }
+
+    .equipos-boton {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .equipos-acciones {
+        display: block;
+    }
+
+    .equipo-imagen {
+        width: 80px;
+        height: 60px;
+    }
+}
