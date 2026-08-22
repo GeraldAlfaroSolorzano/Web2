@@ -1,60 +1,54 @@
-import LoginPage from './pages/LoginPage.jsx';
-import RegistroPage from './pages/RegistroPage.jsx';
-import PerfilPage from './pages/PerfilPage.jsx';
-import CambiarContrasenaPage from './pages/CambiarContrasenaPage.jsx';
-import RecuperarContrasenaPage from './pages/RecuperarContrasenaPage.jsx';
-import RestablecerContrasenaPage from './pages/RestablecerContrasenaPage.jsx';
-import DispositivosPage from './pages/DispositivosPage.jsx';
-import MarcasPage from './pages/MarcasPage.jsx';
-import EquiposPage from './pages/EquiposPage.jsx';
-
+import LoginPage from "./pages/LoginPage.jsx";
+import RegistroPage from "./pages/RegistroPage.jsx";
+import PerfilPage from "./pages/PerfilPage.jsx";
+import CambiarContrasenaPage from "./pages/CambiarContrasenaPage.jsx";
+import RecuperarContrasenaPage from "./pages/RecuperarContrasenaPage.jsx";
+import RestablecerContrasenaPage from "./pages/RestablecerContrasenaPage.jsx";
+import DispositivosPage from "./pages/DispositivosPage.jsx";
+import MarcasPage from "./pages/MarcasPage.jsx";
+import EquiposPage from "./pages/EquiposPage.jsx";
+import PrestamosPage from "./pages/PrestamosPage.jsx";
 
 function App() {
-    const ruta = window.location.pathname;
+  const pathname = window.location.pathname;
 
+  if (pathname === "/registro") {
+    return <RegistroPage />;
+  }
 
-    if (ruta === '/registro') {
-        return <RegistroPage />;
-    }
+  if (pathname === "/perfil") {
+    return <PerfilPage />;
+  }
 
+  if (pathname === "/cambiar-contrasena") {
+    return <CambiarContrasenaPage />;
+  }
 
-    if (ruta === '/perfil') {
-        return <PerfilPage />;
-    }
+  if (pathname === "/recuperar-contrasena") {
+    return <RecuperarContrasenaPage />;
+  }
 
+  if (pathname === "/restablecer-password") {
+    return <RestablecerContrasenaPage />;
+  }
 
-    if (ruta === '/cambiar-contrasena') {
-        return <CambiarContrasenaPage />;
-    }
+  if (pathname === "/dispositivos") {
+    return <DispositivosPage />;
+  }
 
+  if (pathname === "/marcas") {
+    return <MarcasPage />;
+  }
 
-    if (ruta === '/recuperar-contrasena') {
-        return <RecuperarContrasenaPage />;
-    }
+  if (pathname === "/equipos") {
+    return <EquiposPage />;
+  }
 
+  if (pathname === "/prestamos") {
+    return <PrestamosPage />;
+  }
 
-    if (ruta === '/restablecer-password') {
-        return <RestablecerContrasenaPage />;
-    }
-
-
-    if (ruta === '/dispositivos') {
-        return <DispositivosPage />;
-    }
-
-
-    if (ruta === '/marcas') {
-        return <MarcasPage />;
-    }
-
-
-    if (ruta === '/equipos') {
-        return <EquiposPage />;
-    }
-
-
-    return <LoginPage />;
+  return <LoginPage />;
 }
-
 
 export default App;
