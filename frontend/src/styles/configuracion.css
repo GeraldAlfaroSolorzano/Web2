@@ -1,0 +1,76 @@
+.configuracion-contenedor {
+  width: 95%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.configuracion-contenedor h1 {
+  text-align: center;
+}
+
+.configuracion-seccion {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.configuracion-formulario div {
+  margin-bottom: 15px;
+}
+
+.configuracion-formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.configuracion-formulario input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.configuracion-boton {
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222222;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.configuracion-boton:hover {
+  background-color: #444444;
+}
+
+.configuracion-boton:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+.configuracion-mensaje {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.configuracion-navegacion {
+  margin-top: 25px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .configuracion-contenedor {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .configuracion-seccion {
+    padding: 15px;
+  }
+}
