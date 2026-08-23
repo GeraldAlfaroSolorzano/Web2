@@ -8,6 +8,9 @@ import DispositivosPage from "./pages/DispositivosPage.jsx";
 import MarcasPage from "./pages/MarcasPage.jsx";
 import EquiposPage from "./pages/EquiposPage.jsx";
 import PrestamosPage from "./pages/PrestamosPage.jsx";
+import DepartamentosPage from "./pages/DepartamentosPage.jsx";
+import ConfiguracionPage from "./pages/ConfiguracionPage.jsx";
+import ReportesPage from "./pages/ReportesPage.jsx";
 
 function App() {
   const pathname = window.location.pathname;
@@ -48,6 +51,17 @@ function App() {
     return <PrestamosPage />;
   }
 
+  if (pathname === "/departamentos") {
+  return <DepartamentosPage />;
+}
+
+if (pathname === "/configuracion") {
+  return <ConfiguracionPage />;
+}
+
+if (pathname === "/reportes") {
+  return <ReportesPage />;
+}
   return <LoginPage />;
 }
 
