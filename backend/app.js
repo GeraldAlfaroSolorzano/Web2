@@ -11,6 +11,8 @@ import dispositivosRoutes from "./routes/dispositivos.routes.js";
 import marcasRoutes from "./routes/marcas.routes.js";
 import equiposRoutes from "./routes/equipos.routes.js";
 import prestamosRoutes from "./routes/prestamos.routes.js";
+import configuracionRoutes from "./routes/configuracion.routes.js";
+import reportesRoutes from "./routes/reportes.routes.js";
 
 const app = express();
 
@@ -65,6 +67,8 @@ app.use("/api/dispositivos", dispositivosRoutes);
 app.use("/api/marcas", marcasRoutes);
 app.use("/api/equipos", equiposRoutes);
 app.use("/api/prestamos", prestamosRoutes);
+app.use("/api/configuracion", configuracionRoutes);
+app.use("/api/reportes", reportesRoutes);
 
 app.use((req, res) => {
   return res.status(404).json({
