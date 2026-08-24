@@ -10,6 +10,8 @@ import {
 
 import { verificarSesion } from "../middlewares/sesion.middleware.js";
 
+import { verificarAdministrador } from "../middlewares/rol.middleware.js";
+
 import {
   validarCrearPrestamo,
   validarIdPrestamo,
@@ -18,15 +20,28 @@ import {
 
 const router = Router();
 
-router.get("/", verificarSesion, listarPrestamos);
+router.get("/", verificarSesion, verificarAdministrador, listarPrestamos);
 
-router.get("/:id", verificarSesion, validarIdPrestamo, obtenerPrestamo);
+router.get(
+  "/:id",
+  verificarSesion,
+  verificarAdministrador,
+  validarIdPrestamo,
+  obtenerPrestamo,
+);
 
-router.post("/", verificarSesion, validarCrearPrestamo, registrarPrestamo);
+router.post(
+  "/",
+  verificarSesion,
+  verificarAdministrador,
+  validarCrearPrestamo,
+  registrarPrestamo,
+);
 
 router.put(
   "/:prestamoId/detalle/:detalleId/devolver",
   verificarSesion,
+  verificarAdministrador,
   validarDevolucionEquipo,
   devolverEquipoPrestamo,
 );
@@ -34,6 +49,7 @@ router.put(
 router.put(
   "/:id/devolver-completo",
   verificarSesion,
+  verificarAdministrador,
   validarIdPrestamo,
   devolverPrestamoCompleto,
 );

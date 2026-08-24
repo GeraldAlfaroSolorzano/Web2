@@ -72,6 +72,7 @@ export async function obtenerUsuarioPorId(usuarioId) {
   const sql = `
     SELECT
       u.id,
+      u.rol_id,
       u.nombre_completo,
       u.fecha_nacimiento,
       u.correo,
