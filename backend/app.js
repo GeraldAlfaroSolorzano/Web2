@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import session from "express-session";
 import MySQLStoreFactory from "express-mysql-session";
+import path from "path";
 
 import usuariosRoutes from "./routes/usuarios.routes.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -62,6 +63,7 @@ app.use(
 
 app.use("/api/usuarios", usuariosRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use("/api/departamentos", departamentosRoutes);
 app.use("/api/dispositivos", dispositivosRoutes);
 app.use("/api/marcas", marcasRoutes);
